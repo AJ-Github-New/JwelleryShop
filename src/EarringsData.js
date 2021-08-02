@@ -1,0 +1,87 @@
+
+
+const EarringsData = 
+    [
+      {
+        id: '1',
+        name: 'Akira earrings',
+        category: 'Earrings',
+        image: '/images/p1.jpg',
+        price: 120,
+        countInStock: 10,
+        brand: 'Akira',
+        rating: 4.5,
+      },
+      {
+        id: '2',
+        name: 'Atlanta kari earrings',
+        category: 'Earrings',
+        image: '/images/p2.jpg',
+        price: 100,
+        countInStock: 20,
+        brand: 'Atlanta',
+        rating: 4.0,
+      },
+      {
+        id: '3',
+        name: 'Kashfullmoon ',
+        category: 'Earrings',
+        image: '/images/p3.jpg',
+        price: 220,
+        countInStock: 0,
+        brand: 'kash',
+        rating: 4.8,
+      },
+      {
+        id: '4',
+        name: 'Atlanta beautiful earing',
+        category: 'Earings',
+        image: '/images/p4.jpg',
+        price: 78,
+        countInStock: 15,
+        brand: 'Atlanta',
+        rating: 4.5,
+      },
+      {
+        id: '5',
+        name: 'Hari',
+        category: 'Earrings',
+        image: '/images/p5.jpg',
+        price: 65,
+        countInStock: 5,
+        brand: 'Kash',
+        rating: 4.5,
+      },
+      {
+        id: '6',
+        name: 'Vani earring',
+        category: 'Earrings',
+        image: '/images/p6.jpg',
+        price: 139,
+        countInStock: 12,
+        brand: 'Vani',
+        rating: 4.5,
+      },
+      {
+        id: '7',
+        name: 'Sarita earring',
+        category: 'Pants',
+        image: '/images/p6.jpg',
+        price: 139,
+        countInStock: 12,
+        brand: 'Sarita',
+        rating: 4.5,
+      },
+      {
+        id: '8',
+        name: ' Fit Pant',
+        category: 'Pants',
+        image: '/images/p6.jpg',
+        price: 139,
+        countInStock: 12,
+        brand: 'Adidas',
+        rating: 4.5,
+      }
+    ]
+  
+  export default EarringsData;
