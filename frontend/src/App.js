@@ -8,9 +8,11 @@ import Anklet from "./Anklet";
 import React from "react";
 import Corousel from "./Courousel";
 import garland from "./garland.png"
-
-
-
+import EarringScreen from './EarringScreen';
+import AnkletScreen from "./AnkletScreen";
+import NecklaceScreen from './NecklaceScreen.js';
+import BraceletScreen from './BraceletScreen';
+//import AnkletS from './AnkletS'
 function App() {
   return (
     <div className="container" style={{height:"100%"}} >
@@ -44,6 +46,13 @@ function App() {
         <Route exact path="/Anklet" >
           <Anklet/>
         </Route>
+
+        <Route path='/earring/:id' component={EarringScreen}></Route>
+        <Route path='/necklace/:id' component={NecklaceScreen}></Route>
+        <Route path='/anklet/:id' component={AnkletScreen}></Route>
+        <Route path='/bracelet/:id' component={BraceletScreen}></Route>
+
+
 
       </Switch>
     </Router>

@@ -1,0 +1,154 @@
+#root
+{
+  height:100%;
+}
+.container
+{
+  background-image: url('./Shopping.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel .carousel-item {
+  height: 300px;
+  margin-top: 15px;
+   
+}
+
+.carousel-item img {
+    min-height: 300px;
+}
+.img_change
+{
+    /*width:200px;
+    height:200px;*/
+    border: 5px double lightpink;
+   
+    object-fit: contain;
+
+
+}
+
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  transition: all 1s;
+
+}
+.card-body {
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin:0;
+}
+/* Rating */
+.rating span {
+  color: #f0c040;
+}
+
+.card:hover{
+  transform:scale(1.1);
+
+}
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+/*button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #f0c040;
+}
+button.block {
+  width: 150px;
+  height : 50px;
+}*/
+
+
+.nextlinks
+{
+
+  display: flex; 
+flex-direction: row;
+  justify-content: flex-end;
+}
+
+.rating span:last-child{
+  
+  color:#404040;
+}
+
+
+
+/* Image */
+img {
+  border-radius: 0.5rem;
+}
+img.medium {
+  max-width: 29rem;
+  width: 50%;
+}
+img.large {
+  width: 700px;
+ height:500px;
+ border: 5px solid lightpink;
+ transition: all 1s;
+}
+img.large:hover{
+  transform: scale(1.1);
+
+}
+.success {
+  color: #20a020;
+  display: flex;
+  flex-wrap: wrap;
+}
+.error {
+  color: #a02020;
+  display: flex;
+  flex-wrap: wrap;
+}
+Link:hover{
+
+  color:magenta;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+
+
+
+
