@@ -21,7 +21,7 @@ export default function BraceletScreen(props) {
   }, [dispatch, braceletId]);
 
   const addToCartHandler = () => {
-    props.history.push(`/cart/${braceletId}?qty=${qty}`);
+    props.history.push(`/cartbracelet/${braceletId}?qty=${qty}`);
   };
   return (
     <div>

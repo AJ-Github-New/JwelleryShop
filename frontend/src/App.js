@@ -13,7 +13,9 @@ import AnkletScreen from "./AnkletScreen";
 import NecklaceScreen from './NecklaceScreen.js';
 import BraceletScreen from './BraceletScreen';
 import CartScreen from "./CartScreen";
-
+import cartScreenNecklace from './cartScreenNecklace';
+import cartScreenBracelet from './cartScreenBracelet';
+import cartScreenAnklet from './cartScreenAnklet';
 //import AnkletS from './AnkletS'
 function App() {
 
@@ -52,7 +54,10 @@ function App() {
           <Anklet/>
         </Route>
 
-        <Route path="/cart/:id?" component={CartScreen}></Route>
+        <Route exact path="/cart/:id?" component={CartScreen}></Route>
+        <Route exact path="/cartnecklace/:id?" component={cartScreenNecklace}></Route>
+        <Route exact path="/cartanklet/:id?" component={cartScreenAnklet}></Route>
+        <Route exact path="/cartbracelet/:id?" component={cartScreenBracelet}></Route>
 
         <Route path='/earring/:id' component={EarringScreen}></Route>
         <Route path='/necklace/:id' component={NecklaceScreen}></Route>

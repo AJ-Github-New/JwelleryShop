@@ -16,3 +16,5 @@ export const addToCart = (earringId, qty) => async (dispatch, getState) => {
   });
   localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems));
 };
+
+

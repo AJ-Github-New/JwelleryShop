@@ -20,7 +20,7 @@ export default function NecklaceScreen(props) {
   }, [dispatch, necklaceId]);
 
   const addToCartHandler = () => {
-    props.history.push(`/cart/${necklaceId}?qty=${qty}`);
+    props.history.push(`/cartnecklace/${necklaceId}?qty=${qty}`);
   };
 
   return (

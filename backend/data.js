@@ -103,8 +103,8 @@ const data = {
 
     necklaces: [
       {
-        _id: '1',
-        name: 'Kash necklace',
+        _id: '9',
+        name: 'Harryji necklace',
         category: 'necklaces',
         image: '/necklaceimages/necklace1.jpeg',
         price: 140,
@@ -115,8 +115,8 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '2',
-        name: 'Ash necklace',
+        _id: '10',
+        name: 'New necklace',
         category: 'necklaces',
         image: '/necklaceimages/necklace2.jpeg',
         price: 120,
@@ -127,7 +127,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '3',
+        _id: '11',
         name: 'Harry necklace',
         category: 'necklaces',
         image: '/necklaceimages/necklace3.jpeg',
@@ -139,7 +139,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '4',
+        _id: '12',
         name: 'Kash moon',
         category: 'necklaces',
         image: '/necklaceimages/necklace4.jpeg',
@@ -150,7 +150,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '5',
+        _id: '13',
         name: 'Kanishq necklace',
         category: 'necklaces',
         image: '/necklaceimages/necklace5.jpeg',
@@ -162,7 +162,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '6',
+        _id: '14',
         name: 'Tanishq necklace',
         category: 'necklaces',
         image: '/necklaceimages/necklace6.jpeg',
@@ -174,7 +174,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '7',
+        _id: '15',
         name: 'Cider',
         category: 'necklaces',
         image: '/necklaceimages/necklace7.jpeg',
@@ -193,7 +193,7 @@ const data = {
 
     bracelets: [
       {
-        _id: '1',
+        _id: '16',
         name: 'Kash bracelet',
         category: 'bracelets',
         image: '/braceletimages/bracelet1.jpeg',
@@ -205,7 +205,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '2',
+        _id: '17',
         name: 'Ash bracelet',
         category: 'bracelets',
         image: '/braceletimages/bracelet2.jpeg',
@@ -217,7 +217,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '3',
+        _id: '18',
         name: 'Harry bracelet',
         category: 'bracelets',
         image: '/braceletimages/bracelet3.jpeg',
@@ -229,7 +229,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '4',
+        _id: '19',
         name: 'Kash moon',
         category: 'bracelets',
         image: '/braceletimages/bracelet4.jpeg',
@@ -240,7 +240,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '5',
+        _id: '20',
         name: 'Kanishq bracelet',
         category: 'bracelets',
         image: '/braceletimages/bracelet5.jpeg',
@@ -252,7 +252,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '6',
+        _id: '21',
         name: 'Tanishq bracelet',
         category: 'bracelets',
         image: '/braceletimages/bracelet6.jpeg',
@@ -264,7 +264,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '7',
+        _id: '22',
         name: 'Cider',
         category: 'bracelets',
         image: '/braceletimages/bracelet7.jpeg',
@@ -276,7 +276,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '8',
+        _id: '23',
         name: 'Mosh bracelet',
         category: 'bracelets',
         image: '/braceletimages/bracelet8.jpeg',
@@ -293,7 +293,7 @@ const data = {
 
     anklets: [
       {
-        _id: '1',
+        _id: '24',
         name: 'Kash anklet',
         category: 'anklets',
         image: '/ankletimages/anklet1.jpeg',
@@ -305,7 +305,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '2',
+        _id: '25',
         name: 'Ash anklet',
         category: 'anklets',
         image: '/ankletimages/anklet2.jpeg',
@@ -317,7 +317,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '3',
+        _id: '26',
         name: 'Harry anklet',
         category: 'anklets',
         image: '/ankletimages/anklet3.jpeg',
@@ -329,7 +329,7 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '4',
+        _id: '27',
         name: 'Kash moon',
         category: 'anklets',
         image: '/ankletimages/anklet4.jpeg',

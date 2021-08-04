@@ -13,11 +13,7 @@ export default function CartScreen(props) {
       dispatch(addToCart(earringId, qty));
     }
   }, [dispatch, earringId, qty]);
-  useEffect(() => {
-    if (earringId) {
-      dispatch(addToCart(earringId, qty));
-    }
-  }, [dispatch, earringId, qty]);
+ 
   return (
     <div>
       <h1>Cart Screen</h1>

@@ -4,6 +4,14 @@ import { useSelector } from 'react-redux';
 
 function Navbar() {
   const cart = useSelector((state) => state.cart);
+  const cartNecklace = useSelector((state) => state.cartNecklace);
+  const cartBracelet = useSelector((state) => state.cartBracelet);
+  const cartAnklet = useSelector((state) => state.cartAnklet);
+ 
+  const { cartItemsBracelet }=cartBracelet;
+  const { cartItemsNecklace } = cartNecklace;
+  const { cartItemsAnklet} = cartAnklet;
+
   const { cartItems } = cart;
     return (
     
@@ -22,8 +30,8 @@ function Navbar() {
 
         <li className="nav-item order-3" >
           <Link className="nav-link " style={{color:"#904178",fontSize:"20px",fontFamily:"fantasy",backgroundColor:"f0c7e8"}} aria-current="page" to="/cart">  Cart
-              {cartItems.length > 0 && (
-                <span className="badge">{cartItems.length}</span>
+              {(cartItems.length >0 || cartItemsNecklace.length> 0 || cartItemsBracelet.length>0 || cartItemsAnklet.length>0) && (
+                <span className="badge">{cartItems.length+cartItemsNecklace.length+cartItemsBracelet.length+cartItemsAnklet.length}</span>
               )}</Link>
         </li>
 

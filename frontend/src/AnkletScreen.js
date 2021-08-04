@@ -21,8 +21,7 @@ export default function AnkletScreen(props) {
   }, [dispatch, ankletId]);
 
   const addToCartHandler = () => {
-    props.history.push(`/cart/${ankletId}?qty=${qty}`);
-  };
+    props.history.push(`/cartanklet/${ankletId}?qty=${qty}`);  };
 
   return (
     <div>

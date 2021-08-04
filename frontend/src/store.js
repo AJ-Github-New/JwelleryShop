@@ -9,6 +9,9 @@ import { necklaceDetailsReducer } from './reducers/necklaceReducers';
 import { braceletDetailsReducer } from './reducers/braceletReducers';
 import { ankletDetailsReducer } from './reducers/ankletReducers';
 import { cartReducer } from './reducers/cartReducer';
+import { cartReducerNecklace } from './reducers/cartReducerNecklace';
+import { cartReducerBracelet } from './reducers/cartReducerBracelet';
+import { cartReducerAnklet } from './reducers/cartReducerAnklet';
 
 
 const initialState = {};
@@ -21,8 +24,10 @@ const reducer = combineReducers({
   necklaceDetails:necklaceDetailsReducer,
   braceletDetails:braceletDetailsReducer,
   ankletDetails:ankletDetailsReducer,
-  cart: cartReducer
-
+  cart: cartReducer,
+  cartNecklace:cartReducerNecklace,
+  cartBracelet:cartReducerBracelet,
+  cartAnklet:cartReducerAnklet
 
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
