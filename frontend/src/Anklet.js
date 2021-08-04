@@ -1,12 +1,30 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {Link} from 'react-router-dom';
-import data from "./data";
 import Rating from "./Rating";
+import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
+import { useDispatch, useSelector } from 'react-redux';
+import { listanklets } from "./actions/ankletActions";
 
+  
 function Anklet() {
+  const dispatch = useDispatch();
+  const ankletList = useSelector((state) => state.ankletList);
+  const { loading, error, anklets } = ankletList;
+
+  useEffect(() => {
+    dispatch(listanklets());
+  }, [dispatch]);
+
   return (
+    <div>
+    {loading ? (
+      <LoadingBox></LoadingBox>
+    ) : error ? (
+      <MessageBox variant="danger">{error}</MessageBox>
+    ) : (
           <div className="display">
-{data.anklets.map((anklet) => (
+{anklets.map((anklet) => (
               
 
 <div key={anklet._id} className="card" style={{width: "18rem"}}>
@@ -29,6 +47,10 @@ function Anklet() {
 
 
  </div> 
+    )}
+        </div>
+
+ 
   )
 }
 export default Anklet;

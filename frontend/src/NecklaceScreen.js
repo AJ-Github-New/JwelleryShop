@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { detailsNecklace } from './actions/necklaceActions';
+import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
 import Rating from './Rating';
-import data from './data';
 import { ArrowLeft } from 'react-bootstrap-icons';
 
+
 export default function NecklaceScreen(props) {
-  const necklace = data.necklaces.find((x) => x._id === props.match.params.id);
-  if (!necklace) {
-    return <div> necklace Not Found</div>;
-  }
+  const dispatch = useDispatch();
+  const necklaceId = props.match.params.id;
+  const necklaceDetails = useSelector((state) => state.necklaceDetails);
+  const { loading, error, necklace } = necklaceDetails;
+  const [qty, setQty] = useState(1);
+
+  useEffect(() => {
+    dispatch(detailsNecklace(necklaceId));
+  }, [dispatch, necklaceId]);
+
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${necklaceId}?qty=${qty}`);
+  };
+
   return (
+    <div>
+      {loading ? (
+        <LoadingBox></LoadingBox>
+      ) : error ? (
+        <MessageBox variant="danger">{error}</MessageBox>
+      ) : (
     <div>
       <br></br>
 
@@ -63,12 +83,43 @@ export default function NecklaceScreen(props) {
                 </div>
               </li>
             
-                <button className="primary block">Add to Cart</button>
-             
-            </ul>
+                {necklace.countInStock > 0 &&(
+ <>
+ <li>
+   <div className="row">
+     <div>Qty</div>
+     <div>
+       <select
+         value={qty}
+         onChange={(e) => setQty(e.target.value)}
+       >
+         {[...Array(necklace.countInStock).keys()].map(
+           (x) => (
+             <option key={x + 1} value={x + 1}>
+               {x + 1}
+             </option>
+           )
+         )}
+       </select>
+     </div>
+   </div>
+ </li>
+ <li>
+   <button
+     onClick={addToCartHandler}
+     className="primary block"
+   >
+     Add to Cart
+   </button>
+ </li>
+</>
+              )}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

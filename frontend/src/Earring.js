@@ -1,28 +1,20 @@
-import React,{useState,useEffect} from "react";
+import React,{useEffect} from "react";
 import {Link} from 'react-router-dom';
 import Rating from "./Rating";
-import axios from 'axios';
 import LoadingBox from './LoadingBox';
 import MessageBox from './MessageBox';
+import { useDispatch, useSelector } from 'react-redux';
+import { listearrings } from "./actions/earringActions";
 
+  
 function Earring() {
-  const [earrings, setearrings] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const dispatch = useDispatch();
+  const earringList = useSelector((state) => state.earringList);
+  const { loading, error, earrings } = earringList;
+
   useEffect(() => {
-    const fecthData = async () => {
-      try {
-        setLoading(true);
-        const { data } = await axios.get('/api/earrings');
-        setLoading(false);
-        setearrings(data);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-    fecthData();
-  }, []);
+    dispatch(listearrings());
+  }, [dispatch]);
   return (
     <div>
     {loading ? (

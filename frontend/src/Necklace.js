@@ -1,12 +1,32 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {Link} from 'react-router-dom';
-import data from "./data";
 import Rating from "./Rating";
+import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
+import { useDispatch, useSelector } from 'react-redux';
+import { listnecklaces } from "./actions/necklaceActions";
 
+  
 function Necklace() {
+  const dispatch = useDispatch();
+  const necklaceList = useSelector((state) => state.necklaceList);
+  const { loading, error, necklaces } = necklaceList;
+
+  useEffect(() => {
+    dispatch(listnecklaces());
+  }, [dispatch]);
+
   return (
+    <div>
+    {loading ? (
+      <LoadingBox></LoadingBox>
+    ) : error ? (
+      <MessageBox variant="danger">{error}</MessageBox>
+    ) : (
+
+  
           <div className="display">
-{data.necklaces.map((necklace) => (
+{necklaces.map((necklace) => (
               
 
 <div key={necklace._id} className="card" style={{width: "18rem"}}>
@@ -22,13 +42,17 @@ function Necklace() {
 
     {/*<Link to="/" className="btn btn-primary">Add to cart</Link>
   */}
-  </div>
+ </div>
 
 </div>
 ))}
 
 
  </div> 
+    )}
+        </div>
+
+ 
   )
 }
 export default Necklace;

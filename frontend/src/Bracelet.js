@@ -1,12 +1,31 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {Link} from 'react-router-dom';
-import data from "./data";
 import Rating from "./Rating";
 
+import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
+import { useDispatch, useSelector } from 'react-redux';
+import { listbracelets } from "./actions/braceletActions";
+
+  
 function Bracelet() {
+  const dispatch = useDispatch();
+  const braceletList = useSelector((state) => state.braceletList);
+  const { loading, error, bracelets } = braceletList;
+
+  useEffect(() => {
+    dispatch(listbracelets());
+  }, [dispatch]);
+
   return (
+    <div>
+    {loading ? (
+      <LoadingBox></LoadingBox>
+    ) : error ? (
+      <MessageBox variant="danger">{error}</MessageBox>
+    ) : (
           <div className="display">
-{data.bracelets.map((bracelet) => (
+{bracelets.map((bracelet) => (
               
 
 <div key={bracelet._id} className="card" style={{width: "18rem"}}>
@@ -29,6 +48,10 @@ function Bracelet() {
 
 
  </div> 
+    )}
+        </div>
+
+ 
   )
 }
 export default Bracelet;

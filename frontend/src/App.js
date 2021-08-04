@@ -12,8 +12,13 @@ import EarringScreen from './EarringScreen';
 import AnkletScreen from "./AnkletScreen";
 import NecklaceScreen from './NecklaceScreen.js';
 import BraceletScreen from './BraceletScreen';
+import CartScreen from "./CartScreen";
+
 //import AnkletS from './AnkletS'
 function App() {
+
+  
+
   return (
     <div className="container" style={{height:"100%"}} >
       <div className="row">
@@ -46,6 +51,8 @@ function App() {
         <Route exact path="/Anklet" >
           <Anklet/>
         </Route>
+
+        <Route path="/cart/:id?" component={CartScreen}></Route>
 
         <Route path='/earring/:id' component={EarringScreen}></Route>
         <Route path='/necklace/:id' component={NecklaceScreen}></Route>

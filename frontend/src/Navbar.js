@@ -1,6 +1,10 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import { useSelector } from 'react-redux';
+
 function Navbar() {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
     return (
     
 <nav className="navbar navbar-expand-lg fixed-top navbar-light shadow-lg" style={{backgroundColor:"#f0c7e8",height:"100px"}}>
@@ -17,7 +21,10 @@ function Navbar() {
         </li>
 
         <li className="nav-item order-3" >
-          <Link className="nav-link " style={{color:"#904178",fontSize:"20px",fontFamily:"fantasy",backgroundColor:"f0c7e8"}} aria-current="page" to="/cart">Cart</Link>
+          <Link className="nav-link " style={{color:"#904178",fontSize:"20px",fontFamily:"fantasy",backgroundColor:"f0c7e8"}} aria-current="page" to="/cart">  Cart
+              {cartItems.length > 0 && (
+                <span className="badge">{cartItems.length}</span>
+              )}</Link>
         </li>
 
         <li className="nav-item order-4">
